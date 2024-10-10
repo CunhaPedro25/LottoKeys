@@ -4,6 +4,7 @@
   "description": "Small project for SIR (IPVC) to learn javascript and node stuff ",
   "main": "index.js",
   "scripts": {
+    "dev": "npm run frontend && npm run backend",
     "backend": "tsc -p backend/tsconfig.json && node backend/dist/api.js",
     "frontend": "tsc -p frontend/tsconfig.json"
   },
