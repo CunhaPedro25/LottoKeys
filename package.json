@@ -4,7 +4,7 @@
   "description": "Small project for SIR (IPVC) to learn javascript and node stuff ",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run frontend && npm run backend",
+    "dev": "yarn run frontend && yarn run backend",
     "backend": "tsc -p backend/tsconfig.json && node backend/dist/api.js",
     "frontend": "tsc -p frontend/tsconfig.json"
   },
@@ -14,9 +14,5 @@
     "@types/node": "^22.7.4",
     "http": "^0.0.1-security",
     "typescript": "^5.6.2"
-  },
-  "workspaces": [
-    "backend",
-    "frontend"
-  ]
+  }
 }
