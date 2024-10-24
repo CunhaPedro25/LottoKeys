@@ -5,7 +5,7 @@ function generate(): void {
     numberContainer.innerHTML = "";
     starContainer.innerHTML = "";
 
-    fetch("http://0.0.0.0:10000/api/")
+    fetch("/api/")
         .then((response: Response) => response.json())
         .then((data: { numbers: number[], stars: number[] }) => {
 
