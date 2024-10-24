@@ -3,7 +3,7 @@ function generate() {
     const starContainer = document.getElementById("stars");
     numberContainer.innerHTML = "";
     starContainer.innerHTML = "";
-    fetch("http://0.0.0.0:8080/api/")
+    fetch("http://0.0.0.0:10000/api/")
         .then((response) => response.json())
         .then((data) => {
         const numberContent = data.numbers

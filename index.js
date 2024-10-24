@@ -15,7 +15,7 @@ app.get('/api/', api);
 app.use((req, res) => {
     res.status(404).json({ error: 'Not Found' });
 });
-const port = 8080;
+const port = 10000;
 const host = "0.0.0.0";
 app.listen(port, host, () => {
     console.log(`Server is running on http://${host}:${port}`);
