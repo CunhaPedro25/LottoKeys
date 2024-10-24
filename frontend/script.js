@@ -1,14 +1,11 @@
 function generate() {
-    // Type assertions for the elements (assuming they exist in the DOM)
     const numberContainer = document.getElementById("numbers");
     const starContainer = document.getElementById("stars");
-    // Clear the containers
     numberContainer.innerHTML = "";
     starContainer.innerHTML = "";
-    fetch("http://localhost:8080")
+    fetch("http://0.0.0.0:8080/api/")
         .then((response) => response.json())
         .then((data) => {
-        // Ensure data is typed with arrays of numbers
         const numberContent = data.numbers
             .map((element) => `<div>${element}</div>`)
             .join("");
