@@ -11,7 +11,7 @@
     "copy:html": "cp frontend/index.html dist/frontend/index.html",
     "start:server": "node dist/index.js",
     "dev": "npm run clean && npm run build:css & npm run build:ts && npm run copy:html && npm run copy:assets && npm run start:server",
-    "start": "npm run dev"
+    "start": "npm run start:server"
   },
   "author": "",
   "license": "ISC",
