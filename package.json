@@ -4,8 +4,14 @@
   "description": "Small project for SIR (IPVC) to learn javascript and node stuff ",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc -p tsconfig.json && node index.js",
-    "start": "tsc -p tsconfig.json && node index.js"
+    "clean": "rm -rf dist && mkdir -p dist",
+    "build:css": "npx tailwindcss -i frontend/style.css -o dist/frontend/style.css",
+    "build:ts": "tsc -p tsconfig.json",
+    "copy:assets": "cp -r frontend/assets dist/frontend/assets",
+    "copy:html": "cp frontend/index.html dist/frontend/index.html",
+    "start:server": "node dist/index.js",
+    "dev": "npm run clean && npm run build:css & npm run build:ts && npm run copy:html && npm run copy:assets && npm run start:server",
+    "start": "npm run dev"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +21,8 @@
     "express": "^4.21.1",
     "http": "^0.0.1-security",
     "typescript": "^5.6.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
   }
 }

@@ -24,10 +24,11 @@
     </head>
     <body onload="generate()">
 
-        <div class="container">
+        <div class="background"></div>
 
+        <div class="container">
+            <img class="h-28" alt="euromilhoes logo" src="/assets/logo/euromilhoes.webp" />
             <div class="key">
-                <h1>Euromilhões Generator</h1>
                 <div id="numbers" class="numbers"></div>
 
                 <p>+</p>
@@ -37,12 +38,16 @@
             </div>
 
 
-            <button onclick="generate()">
+            <button class="primary" onclick="generate()">
                 Generate
             </button>
         </div>
 
-
+        <div class="footer">
+            <p>Created By <a href="https://github.com/CunhaPedro25">Pedro Cunha</a></p>
+            <span>•</span>
+            <p>Source on <a href="https://github.com/CunhaPedro25/LottoKeys">Github</a></p>
+        </div>
     </body>
     <script src="script.js"></script>
 </html>
